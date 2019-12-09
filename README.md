@@ -1,6 +1,6 @@
 # Glaucoma Classification using General Fundus images
 
-건양대학병원에서 제공하는 일반안저영상(General Fundus Image)를 사용하여 녹내장과 정상을 구분하는 학습 모델을 구현하였다. 두 명의 안과 의사의 교차검증을 통한 데이터로 부터 녹내장과 정상을 구분받은 두 개의 데이터셋에 대해서 학습을 진행하였다. Google에서 2016년도에 발표한 [Xception](https://arxiv.org/pdf/1610.02357.pdf)과 2017년 발표된 [Squeeze-and-Excitation Networks](https://arxiv.org/pdf/1709.01507.pdf)에서 제시하는 Squeeze Excitation Block을 혼합하여 모델을 구현해 사용하였으며, 약 평균 0.000의 AUROC를 보여주고 있다.
+건양대학병원에서 제공하는 일반안저영상(General Fundus Image)를 사용하여 녹내장과 정상을 구분하는 학습 모델을 구현하였다. 두 명의 안과 의사의 교차검증을 통한 데이터로 부터 녹내장과 정상을 구분받은 두 개의 데이터셋에 대해서 학습을 진행하였다. Google에서 2016년도에 발표한 [Xception](https://arxiv.org/pdf/1610.02357.pdf)과 2017년 발표된 [Squeeze-and-Excitation Networks](https://arxiv.org/pdf/1709.01507.pdf)에서 제시하는 Squeeze Excitation Block을 혼합하여 모델을 구현해 사용하였다.
 
 ## Data Preprocessing and Augmentation
 일반 안저영상으로 촬영된 정상 안저영상과 녹내장 안저영상을 전처리하고 증강하면서, 녹내장을 진단할 수 있는 risk factor를 최대한 손상시키지 않으면서 그 특징들을 최대로 강화시키고자 하였다. 안저영상은 아래와 같은 방법으로 전치리되고 Augmentation이 수행되었다. 아래의 정리 순서는 실제 전처리와 증강이 실행된 순서와 다를 수도 있다.
